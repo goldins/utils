@@ -1,43 +1,23 @@
 alias lst='ls -lahtr'
 alias grepc='grep -nr --color'
 
-alias gw='grunt watch --common=local'
-alias nbg='npm install; bower install; grunt watch --common=local'
-alias gpo='git push origin'
+alias yys='yarn && yarn start'
 alias ys='yarn start'
 alias yt='yarn test'
+alias yb='yarn build'
+alias ybd='yarn build:dev'
+
+alias gdev='gatsby develop'
+
+alias grom='git rebase -i origin/master'
+
+alias glgs='git log --pretty="%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s"'
 
 export PATH=$PATH:~/bin/:/usr/local/bin/:/usr/local/go/bin
 
 export GOPATH=$HOME/Go
 
 export PATH=$PATH:$GOPATH/bin
-
-ORG=goldins
-
-function current_repo() {
-  git remote -v | head -n1 | awk '{print $2}' | sed 's/.*\///' | sed 's/\.git//'
-}
-
-function master_diff() {
-  open https://github.com/${ORG}/`current_repo`/compare/master...`current_branch`\?expand\=1
-}
-
-function dev_diff() {
-  open https://github.com/${ORG}/`current_repo`/compare/dev...`current_branch`\?expand\=1
-}
-
-function see_tag() {
-  open https://github.com/${ORG}/`current_repo`/releases/tag/$1
-}
-
-function branch_diff() {
-  open https://github.com/${ORG}/`current_repo`/compare/$1...`current_branch`\?expand\=1
-}
-
-function release_diff() {
-  `branch_diff release-$1`;
-}
 
 function curl2html() {
    curl $1 > html.html && open html.html
@@ -47,17 +27,27 @@ function curl2json_pp() {
    curl $1 | json_pp
 }
 
-fpath=(/usr/local/share/zsh-completions $fpath)
+function vif() {
+  vi `fzf`
+}
 
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border'
 
 alias cb='gco $(gb | fzf)'
 
-nvm use 10
-
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
+export NVM_DIR="$HOME/.nvm"
+source $(brew --prefix nvm)/nvm.sh
+
+export GPG_TTY=$(tty)
+
+nvm use 12
+
+set -o vi
+
+# https://gist.github.com/cezaraugusto/2c91d141ddec026753051ffcace3f1f2#gistcomment-3336641
+export GPG_TTY=$(tty)
