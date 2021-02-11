@@ -1,12 +1,6 @@
 alias lst='ls -lahtr'
 alias grepc='grep -nr --color'
 
-alias yys='yarn && yarn start'
-alias ys='yarn start'
-alias yt='yarn test'
-alias yb='yarn build'
-alias ybd='yarn build:dev'
-
 alias gdev='gatsby develop'
 
 alias grom='git rebase -i origin/master'
