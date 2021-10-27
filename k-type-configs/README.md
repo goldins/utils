@@ -2,10 +2,10 @@
 Configs for k-type keyboard
 
 #### Keymap:
-![keymap](https://raw.githubusercontent.com/goldins/k-type-configs/master/keymap.png)
+![keymap](https://raw.githubusercontent.com/goldins/utils/master/k-type-configs/keymap.png)
 
 #### winter:
-![winter theme](https://raw.githubusercontent.com/goldins/k-type-configs/master/winter/winter_visuals.png)
+![winter theme](https://raw.githubusercontent.com/goldins/utils/master/k-type-configs/winter/winter_visuals.png)
 
 #### spring:
-![spring theme](https://raw.githubusercontent.com/goldins/k-type-configs/master/spring/spring.png)
+![spring theme](https://raw.githubusercontent.com/goldins/utils/master/k-type-configs/spring/spring.png)
