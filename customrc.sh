@@ -7,6 +7,10 @@ alias grom='git rebase -i origin/master --autostash'
 
 alias glgs='git log --pretty="%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s"'
 
+alias gwa='git worktree add'
+alias gwl='git worktree list'
+alias gwr='git worktree remove'
+
 export PATH=$PATH:~/bin/:/usr/local/bin/:/usr/local/go/bin
 
 export GOPATH=$HOME/Go
