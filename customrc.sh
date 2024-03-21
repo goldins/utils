@@ -10,6 +10,7 @@ alias glgs='git log --pretty="%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))
 alias gwa='git worktree add'
 alias gwl='git worktree list'
 alias gwr='git worktree remove'
+alias grbia='git rebase --autostash --autosquash --interactive'
 
 export PATH=$PATH:~/bin/:/usr/local/bin/:/usr/local/go/bin
 
