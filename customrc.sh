@@ -1,9 +1,10 @@
 alias lst='ls -lahtr'
 alias grepc='grep -nr --color'
 
-alias gdev='gatsby develop'
+alias grom='git rebase -i origin/main --autostash'
 
-alias grom='git rebase -i origin/master --autostash'
+# add all fixup previous commit and force push
+alias grbf='ga . && gc --fixup HEAD && grbia HEAD~2 && gpf!'
 
 alias glgs='git log --pretty="%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s"'
 
